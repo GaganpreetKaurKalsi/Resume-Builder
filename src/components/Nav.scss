@@ -1,0 +1,26 @@
+.nav{
+    border-bottom: 1px solid #EBEBEB;
+    margin-top: 20px;
+    .navItems{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+        margin:0;
+        .item{
+            margin: 0 20px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            height: 100%;
+            padding: 10px;
+            cursor: pointer;
+            &.active{
+                color: #222222;
+                border-bottom: 2px solid #222222;
+            }
+        }
+    }
+}

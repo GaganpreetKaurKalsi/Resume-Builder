@@ -1,0 +1,43 @@
+button{
+    cursor: pointer;
+}
+input:active, input:focus, textarea:focus{
+    outline: none;
+    background-color: #fbfbfb;
+}
+textarea{
+    font-family: 'AvenirNextRegular', sans-serif;
+}
+.addNewItem{
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    .addNewBtn{
+        border-radius: 8px;
+        width: 100%;
+        background: white;
+        padding: 8px 10px;
+        color: #222222;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        border: 1px solid #717171;
+        &:hover{
+            background-color: #f9fafb;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .addNewItem{
+        width: 70%;
+    }
+}
+
+.loading{
+    font-size: 16px;
+    color: #9ca3af;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}

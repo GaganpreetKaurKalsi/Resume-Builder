@@ -1,0 +1,29 @@
+.inputElement{
+    margin-bottom: 20px;
+    .label{
+        color: #222222;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        display: block;
+        text-align: left;
+    }
+    .input{
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        width: 100%;
+        padding: 10px 15px;
+        margin-top: 8px;
+        &.textarea{
+            resize: none;
+            height: 58%;
+        }
+    }
+}
+
+.avatarUploadElement{
+    div:first-child{
+        background-size: 100% 100%;
+        border: 1px dashed #EBEBEB;
+    }
+}

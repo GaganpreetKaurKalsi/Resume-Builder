@@ -1,0 +1,77 @@
+.react-responsive-modal-root{
+    .react-responsive-modal-modal{
+        max-width: 500px;
+        width: 70%;
+        background: #FFFFFF;
+        border-radius: 16px;
+        .container, .deleteModalContainer{
+            padding:15px;
+            .heading{
+                color: #222222;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                margin-top: 0;
+                margin-bottom: 30px;
+                font-family: 'AvenirNextBold', sans-serif;
+            }
+            .input{
+                width:-webkit-fill-available;
+            }
+            .textarea{
+                height: 80px;
+            }
+            .dflex{
+                display: flex;
+                justify-content: space-between;
+                .inputElement{
+                    width: 48%;
+                }
+            }
+            .btns{
+                .btn{
+                    border: none;
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 24px;
+                    border-radius: 6px;
+                    padding: 6px 15px;
+                    letter-spacing: 0.6px;
+                }
+                .saveBtn{
+                    background: #008392;
+                    color: white;
+                    &:hover{
+                        background-color: #01727e;
+                    }
+                }
+                .cancelBtn{
+                    border: 1px solid #EBEBEB;
+                    color: #717171;
+                    margin-left: 25px;
+                    background-color: white;
+                    &:hover{
+                        background-color: #e5e7eb;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+#deleteModal.deleteModalContainer{
+    .heading{
+        font-size: 20px;
+    }
+    .cancelBtn{
+        margin-left: 0;
+    }
+    .confirmBtn{
+        margin-left: 20px;
+    }
+}
+
+button:focus, button:focus-visible, button:active{
+    outline: none;
+}

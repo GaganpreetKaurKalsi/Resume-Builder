@@ -1,0 +1,50 @@
+.generalInfo{
+    display: flex;
+    flex-direction: row;
+    place-items: flex-start;
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    .avatarUploader{
+        width: fit-content;
+        margin-right: 50px;
+    }
+    .infoContainer{
+        display: flex;
+        flex-direction: column; 
+        width: 80%;
+        justify-content: flex-start;
+        .row1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .col1{
+                margin-right:40px;
+                width: 40%;
+            }
+            .col2{
+                height: inherit;
+                width: 50%;
+                .inputElement{
+                    height:100%;
+                }
+            }
+        }
+        .row2{
+            .saveBtn{
+                text-align: left;
+                background: #008392;
+                border-radius: 6px;
+                color: white;
+                border: none;
+                padding: 8px 18px;
+                font-size: 16px;
+                line-height: 24px;
+                &:hover{
+                    background: #006974;
+                }
+            }
+        }
+    }
+}

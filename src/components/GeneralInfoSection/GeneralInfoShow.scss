@@ -1,0 +1,74 @@
+.generalInfoShow{
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    place-items: flex-start;
+    .profilePicSection{
+        width: fit-content;
+        .profilePic{
+            height:150px;
+            width: 150px;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 100px;
+            }
+            .avatarPic{
+                height: 100%;
+                background-color: #ede9fe;
+                border-radius: 100px;
+                text-align: center;
+                vertical-align: middle;
+                display: flex;
+                place-content: center;
+                justify-content: center;
+                p{
+                    font-size: 30px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    .details{
+        display: block;
+        margin-left: 50px;
+        width: 80%;
+        .name{
+            color: #222222;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 10px;
+            font-family: 'AvenirNextBold', sans-serif;
+        }
+        .email{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 24px;
+            color: #717171;
+            margin-bottom: 10px;
+        }
+        .bio{
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 20px;
+            color: #222222;
+        }
+        .editBtn{
+            border: 1px solid #EBEBEB;
+            border-radius: 6px;
+            padding: 8px 20px;
+            background-color: white;
+            color: #717171;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 30px;
+            &:hover{
+                background-color: #f3f4f6;
+            }
+        }
+    }
+}

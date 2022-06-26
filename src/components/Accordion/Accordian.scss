@@ -1,0 +1,97 @@
+.accordionContent{
+    margin-top: 30px;
+    .element{
+        margin: 20px 20px 20px 30px;
+        .label{
+            color: #222222;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 4px;
+        }
+        .value{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #2B2B2B;
+            &.description{
+                font-weight: normal;
+            }
+        }
+    }
+    .btnsContainer{
+        display: flex;
+        margin-left: 30px;
+        .btn{
+            border: 1px solid #EBEBEB;
+            border-radius: 6px;
+            padding: 6px 18px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            background-color: white; 
+            cursor: pointer;
+            &.delete{
+                margin-left: 20px;
+                &:hover{
+                    background-color: #ef4444;
+                    color: white;
+                }
+            }      
+            &.edit:hover{
+                background-color: #e5e7eb;
+            }     
+        }
+    }
+}
+
+.accordionItem{
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    padding: 12px 24px 12px 16px;
+    margin: 25px auto;
+    .accordionHead{
+        display: flex;
+        .toggleIcon{
+            cursor: pointer;
+            transition: transform 0.2s;
+            svg{
+                vertical-align: middle;
+            }
+            &.open{
+                transform: rotate(90deg);
+            }
+        }
+        .heading{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            place-items: center;
+            margin-left: 5px;
+        }
+        .title{
+            color: #2B2B2B;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .date{
+            color: #717171;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+.accordionContainer{
+    width: 50%; 
+    margin: auto;
+}
+
+@media screen and (max-width: 900px){
+    .accordionContainer{
+        width: 70%; 
+    }
+}
