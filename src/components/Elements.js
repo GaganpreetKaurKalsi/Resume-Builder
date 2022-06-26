@@ -7,8 +7,8 @@ const InputElement = forwardRef(({label="Name", type = "text", ...props}, ref) =
   return (
     <div className='inputElement'>
         <label className='label' htmlFor={label} >{label}</label>
-        {type==="text" && <input type={type} name={label} className={`input ${type}`} ref={ref} {...props} />}
-        {type==="textarea" && <textarea name={label} className={`input ${type}`} ref={ref} {...props}/>}
+        {type==="text" && <input id={label} type={type} name={label} className={`input ${type}`} ref={ref} {...props} />}
+        {type==="textarea" && <textarea id={label} name={label} className={`input ${type}`} ref={ref} {...props}/>}
     </div>
   )
 })
@@ -23,6 +23,7 @@ const AvatarUploadElement = forwardRef(({...props}, ref) => {
                 placeholder={uploaderPlaceholder}
                 className="avatarUploader"
                 ref={ref}
+                id="avatarImage"
                 {...props}
             />
         </div>
