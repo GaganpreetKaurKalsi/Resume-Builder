@@ -85,7 +85,7 @@ function App() {
       </Suspense>
       
       <Suspense fallback={<div className='loading top'>Loading...</div>}>
-        {(isModalOpen.type === "edit" || isModalOpen.type === "add") && isModalOpen.open && <EditModal  isOpen={isModalOpen} setIsOpen={setIsModalOpen} heading={modalData[activeTab.value].title} fields={modalData[activeTab.value].fields} setData={setData} type={activeTab} action={editTabData==="" ? "add" : "edit"} editData={data[activeTab.value][editTabData]} setEditTabData={setEditTabData} editIdx={editTabData} />}
+        {(isModalOpen.type === "edit" || isModalOpen.type === "add") && isModalOpen.open && <EditModal  isOpen={isModalOpen} setIsOpen={setIsModalOpen} heading={modalData[activeTab.value].title[isModalOpen.type]} fields={modalData[activeTab.value].fields} setData={setData} type={activeTab} action={editTabData==="" ? "add" : "edit"} editData={data[activeTab.value][editTabData]} setEditTabData={setEditTabData} editIdx={editTabData} />}
       </Suspense>
       
       <Navbar setData={setData} data={data} initialData={initialData} setIsEditing={setIsEditing} />
