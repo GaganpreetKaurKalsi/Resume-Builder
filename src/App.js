@@ -28,18 +28,19 @@ const navItems = [
 
 const modalData={
   education : { 
-    title : "Add new education",
+    title : {add: "Add new education", edit: "Edit education"},
     fields: ["institute", "degree", "startDate", "endDate", "description"],
   },
   workExperiences : {
-    title : "Add new work experience",
+    title : {add: "Add new work experience", edit: "Edit work experience"},
     fields: ["company", "role", "startDate", "endDate", "description"],
   },
   achievements : {
-    title : "Add new achievement",
+    title : {add: "Add new achievement", edit: "Edit achievement"},
     fields: ["title", "date", "description"]
   }
 }
+
 
 
 function App() {
@@ -79,12 +80,12 @@ function App() {
   return (
     <div className="App">
       <Toaster />
-      <Suspense fallback={<div className='loading'>Loading...</div>}>
+      <Suspense fallback={<div className='loading top'>Loading...</div>}>
         {isModalOpen.type === "delete" && isModalOpen.open && <DeleteModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} deleteIdx={editTabData} setData={setData} type={activeTab} setEditIdx={setEditTabData} />}
       </Suspense>
       
-      <Suspense fallback={<div className='loading'>Loading...</div>}>
-        {isModalOpen.type === "edit" && isModalOpen.open && <EditModal  isOpen={isModalOpen} setIsOpen={setIsModalOpen} heading={modalData[activeTab.value].title} fields={modalData[activeTab.value].fields} setData={setData} type={activeTab} action={editTabData==="" ? "add" : "edit"} editData={data[activeTab.value][editTabData]} setEditTabData={setEditTabData} editIdx={editTabData} />}
+      <Suspense fallback={<div className='loading top'>Loading...</div>}>
+        {(isModalOpen.type === "edit" || isModalOpen.type === "add") && isModalOpen.open && <EditModal  isOpen={isModalOpen} setIsOpen={setIsModalOpen} heading={modalData[activeTab.value].title} fields={modalData[activeTab.value].fields} setData={setData} type={activeTab} action={editTabData==="" ? "add" : "edit"} editData={data[activeTab.value][editTabData]} setEditTabData={setEditTabData} editIdx={editTabData} />}
       </Suspense>
       
       <Navbar setData={setData} data={data} initialData={initialData} setIsEditing={setIsEditing} />
