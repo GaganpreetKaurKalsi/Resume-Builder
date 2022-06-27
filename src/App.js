@@ -97,7 +97,7 @@ function App() {
       <Nav navItems={navItems} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className='dataContainer'>
         <div className='addNewItem'>
-          <button className='addNewBtn' onClick={()=>{openModal({type: "edit", open: true})}}>Add new</button>
+          <button className='addNewBtn' onClick={()=>{openModal({type: "add", open: true})}}>Add new</button>
         </div>
         <Suspense fallback={<div className='loading'>Loading...</div>}>
           <AccordionList openModal={openModal} setEditTabData={setEditTabData} list={data[activeTab.value]} setData={setData} type={activeTab} />
