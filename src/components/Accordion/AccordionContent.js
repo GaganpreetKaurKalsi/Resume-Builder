@@ -1,13 +1,8 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 import { keyValueMap } from '../../constants/constants'
 
 const AccordionContent = ({content, children}) => {
     const keys = Object.keys(content)
-
-    useEffect(() => {
-        console.log("Rendering Acoordion Content")
-    })
-
     return (
         <div className='accordionContent'>
             {keys.map((e, idx) => (
