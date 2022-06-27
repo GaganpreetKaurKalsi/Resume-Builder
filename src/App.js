@@ -1,12 +1,9 @@
 import React, {useEffect, useState, lazy, Suspense} from 'react'
 import './App.scss';
-// import AccordionList from './components/Accordion/AccordionList';
 import GeneralInfoEdit from './components/GeneralInfoSection/GeneralInfoEdit';
 import GeneralInfoShow from './components/GeneralInfoSection/GeneralInfoShow';
 import Nav from './components/Nav';
 import Navbar from './components/Navbar';
-// import EditModal from './components/Modals/EditModal';
-// import DeleteModal from './components/Modals/DeleteModal';
 import { Toaster } from 'react-hot-toast';
 
 const EditModal = lazy(() => import('./components/Modals/EditModal'))
@@ -82,11 +79,11 @@ function App() {
   return (
     <div className="App">
       <Toaster />
-      <Suspense>
+      <Suspense fallback={<div className='loading'>Loading...</div>}>
         {isModalOpen.type === "delete" && isModalOpen.open && <DeleteModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} deleteIdx={editTabData} setData={setData} type={activeTab} setEditIdx={setEditTabData} />}
       </Suspense>
       
-      <Suspense>
+      <Suspense fallback={<div className='loading'>Loading...</div>}>
         {isModalOpen.type === "edit" && isModalOpen.open && <EditModal  isOpen={isModalOpen} setIsOpen={setIsModalOpen} heading={modalData[activeTab.value].title} fields={modalData[activeTab.value].fields} setData={setData} type={activeTab} action={editTabData==="" ? "add" : "edit"} editData={data[activeTab.value][editTabData]} setEditTabData={setEditTabData} editIdx={editTabData} />}
       </Suspense>
       
