@@ -26,6 +26,7 @@ An application created using React and Saas where you can build your resume. The
 ## ◼️ Features
 - Avatar with name initials incase Profile pic not uploaded.
 - Import/Export resume in form of JSON
+- Data stored in local storage, so you can preserve it.
 - Add / Delete data
 - Notifications on adding/deleting data.
 - Optimized using memo, useCallback to improve performance
