@@ -32,6 +32,8 @@ An application created using React and Saas where you can build your resume. The
 - Optimized using memo, useCallback to improve performance
 - Used code splitting to improve performance
 
+<br>
+
 ## ◻️ Demo video
 
 https://user-images.githubusercontent.com/54144759/176771839-431bfb92-c024-4e7d-8ba0-f1234c36caa0.mp4
